@@ -1,0 +1,187 @@
+
+body {
+	font-family: 'Raleway', sans-serif;
+	background-color: bisque;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+div.height {
+	max-height: 90%;
+	position: relative;
+}
+
+#wrapper ul{
+	display: inline-block;
+}
+
+#hamburger {
+	border: 3px solid green;
+	display: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+span.ham {
+	width: 50px;
+	margin: 3px;
+	height: 3px;
+	position: relative;
+	display: block;
+	background-color: black;
+	border-radius: 2px;
+	pointer-events: none;
+}
+
+.mobilenav {
+	background-color: lightgreen;
+	margin: 0 auto;
+	position: relative;
+	margin-top: -20px;
+	transform: translate(-110%, 0%);
+	transition: 1s all cubic-bezier(1, 0.25, 0.07, 0.96);
+}
+.mobilenav ul {
+	padding-left: 20px;
+}
+
+.mobile-nav-items li {
+	list-style: none;
+	font-size: 1rem;
+}
+
+.mobilenav.active {
+	display:none;
+}
+
+#wrapper.active {
+	display:block;
+}
+
+@media screen and (max-width: 420px){
+	div#hamburger {
+		display: inline-block;
+	}
+	.mobilenav.active {
+		display: block;
+		transform: translate(0%, 0%);
+	}
+}
+
+@media screen and (max-width: 420px){
+	div#wrapper {
+		display: none;
+	}
+	.mobilenav.active {
+		display: none;
+		transform: translate(0%, 0%);
+	}
+}
+
+#left-side {
+    height: 500px;
+    width: 45%;
+    float: left;
+    border: 5px solid green;
+    padding: 5px;
+    margin: 5px;	
+}
+
+.slideshow-left  {
+	height: 500px;
+	max-width: 700px;
+	margin: 0 auto;
+  	position:relative;
+  	overflow: hidden;
+  	transform: translate3d(0,0,0);
+}
+
+.slideshow-left > div {
+	height: 500px;
+	width: 5120px;
+	background: url(collage_left.jpg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	transform: translate3d(0,0,0);
+}
+
+.slideshow-left .images-1 {
+  animation: moveSlideshowLeft 12s linear infinite;
+}
+.slideshow-left .images-2 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  background-position: 0 -1000px;
+  animation: moveSlideshowLeft 15s linear infinite;
+}
+.slideshow-left:hover .images-2 {
+  opacity: 1;
+}
+
+#right-side {
+    height: 500px;
+    width: 45%;
+    float: left;
+    border: 5px solid green;
+    padding: 5px;
+    margin: 5px;	
+}
+
+.slideshow-right  {
+	height: 500px;
+	max-width: 700px;
+	margin: 0 auto;
+  	position:relative;
+  	overflow: hidden;
+  	transform: translate3d(0,0,0);
+}
+
+.slideshow-right > div {
+	height: 500px;
+	width: 5120px;
+	background: url(collage_right.jpg);
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	transform: translate3d(0,0,0);
+}
+
+.slideshow-right .images-3 {
+  animation: moveSlideshowRight 12s linear infinite;
+}
+.slideshow-right .images-4{
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  background-position: 0 -1000px;
+  animation: moveSlideshowRight 15s linear infinite;
+}
+.slideshow-right:hover .images-4 {
+  opacity: 1;
+}
+
+@keyframes moveSlideshowLeft {
+  100% { 
+    transform: translateX(-50%);  
+  }
+}
+
+@keyframes moveSlideshowRight {
+  100% { 
+    transform: translateX(50%);  
+  }
+}
+
+
+
+
+
+
+

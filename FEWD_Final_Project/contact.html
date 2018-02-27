@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="contact.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<header>
+	<h2><a href="Main.html">Mobash Wood Works</a></h2>
+</header>
+<div class="height">
+<div id ="wrapper">
+		<ul>Portfolio</ul>
+		<ul>Collections</ul>
+		<ul id="logo">MWW</ul>
+		<ul>About</ul>
+	</div>
+<div class="container">
+	<form action="" class="class name" novalidate>
+		<label for="email">
+		</label>
+		<span>Hey! Enter your email here so I can reach out to you</span>
+		<br>
+		<label for="name"> Name</label>
+		<input type="name" id="name" name="user-data">
+		<br>
+		<label for="email">Email</label>
+		<input type="email" id="email" name="email-data">
+		<br>
+		<textarea name="feedback" id="text" cols="30" rows="10" placeholder="Hey, you make really cool designs. Stay awesome!"></textarea>
+		<button type="submit">Submit</button>	
+	</form>	
+</div>
+
+<div class="footer">
+	<div class="sawblade">
+	<img id="sawblade" src="sawblade.png" alt="">
+	</div>
+</div>
+<script>
+	var sawblade= document.querySelector('.sawblade')
+	sawblade.addEventListener('click', function(){
+		var status = sawblade.classList.contains('active');
+
+		if(status) {
+        sawblade.classList.remove('active');
+      } else {
+        sawblade.classList.add('active');
+      }
+	});
+</script>
+</div>
+
+
+</body>
+</html>

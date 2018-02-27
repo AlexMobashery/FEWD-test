@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="Main.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+	<h2><a href="Main.html">Mobash Wood Works</a></h2>
+</header>
+<div id="hamburger">
+		<span class="ham"></span>
+		<span class="ham"></span>
+		<span class="ham"></span>
+	</div>
+	<div class="mobilenav">
+		<ul>
+			<li class="mobile-nav-items">About</li>
+			<li class="mobile-nav-items">Contact</li>
+			<li class="mobile-nav-items">Collections</li>
+		</ul>
+	</div>
+
+<div class=height>
+	<div id ="wrapper">
+		<ul>Portfolio</ul>
+		<ul>Collections</ul>
+		<ul id="logo">MWW</ul>
+		<ul>About</ul>
+		<ul><a href="contact.html">Contact</a></ul>
+	</div>
+	
+	<div id="container">
+		<div id="left-side">
+			<div class="slideshow-left">
+				<div class="images-1"></div>
+				<div class="images-2"></div>
+			</div>
+		</div>
+		<div id="right-side">
+			<div class="slideshow-right">
+				<div class="images-3"></div>
+				<div class="images-4"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+  var hamburger = document.querySelector('#hamburger');
+
+  var mobileNav = document.querySelector('.mobilenav');
+
+  hamburger.onclick = function(){
+
+    var status = mobileNav.classList.contains('active');
+
+    if(!status) {
+      mobileNav.classList.add('active');
+    } else {
+      mobileNav.classList.remove('active');
+    }
+  }
+</script>
+</body>
+</html>
